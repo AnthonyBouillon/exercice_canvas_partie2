@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas exercice 2 partie 2</title>
+    <meta http-equiv="refresh" content="2; URL=index.html" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <canvas id="draw" width="400px" height="400px"></canvas>
+    <script>
+    var c = document.getElementById('draw');
+    var ctx = c.getContext('2d');
+
+    ctx.beginPath();
+    ctx.bezierCurveTo(130,172,170,30,230,175);
+    ctx.fillStyle='rgb(255,255,255)';
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+    // Courbe haut
+    ctx.beginPath();
+    ctx.bezierCurveTo(50,200,150,130,300,200);
+     ctx.fillStyle='rgb(224,225,243)';
+     ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+    // courbe basse
+    ctx.beginPath();
+    // 3 = millieu?
+    ctx.bezierCurveTo(50,200,150,300,300,200);
+     ctx.fillStyle = 'rgb(224,225,243)';
+     ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+
+    </script>
